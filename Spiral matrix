@@ -1,0 +1,24 @@
+a=[[]]
+a=[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
+t=0
+b=3
+l=0
+r=3
+
+while(t<=b and l<=r):
+    for i in range(l,r+1):
+        print(a[t][i])
+    t+=1
+    
+    for i in range(t,b+1):
+        print(a[i][r])
+    r-=1
+    
+    if t<=b:
+        for i in range(r,l-1,-1):
+            print(a[b][i])
+        b-=1
+    if l<=r:
+        for i in range(b,t-1,-1):
+            print(a[i][l])
+        l+=1
